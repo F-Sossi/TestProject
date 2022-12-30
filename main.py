@@ -44,9 +44,3 @@ print(minimum_moves([1, 2, 3]))  # Output: 2
 print(minimum_moves([3, 2, 1]))  # Output: 1
 print(minimum_moves([1, 1, 0, 1]))  # Output: 3
 print(minimum_moves([ ]))  # Output: 3
-
-
-
-
-
-
