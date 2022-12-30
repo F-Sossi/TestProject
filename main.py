@@ -1,9 +1,10 @@
+"""Main module"""
 # This is an example of dynamic programming in python. The below function
 # calculates the minimum number of moves required to reach the end of a list
 
+
 def minimum_moves(number_list):
-    """Dynamic method to calculate the minimum number of moves required 
-    to reach the end of the list"""
+    """Method to find minimum moves"""
 
     # check if empty list
     if not number_list:
@@ -18,7 +19,7 @@ def minimum_moves(number_list):
     for i, number in enumerate(number_list):
         # Loop through all the possible positions that can be reached
         # from the current position
-        for j in range(1, number_list[i] + 1):
+        for j in range(1, number + 1):
             # Calculate the next position
             next_position = i + j
 
@@ -45,4 +46,4 @@ print(minimum_moves([3, 2, 1, 4, 2, 3, 1, 1, 3]))  # Output: 3
 print(minimum_moves([1, 2, 3]))  # Output: 2
 print(minimum_moves([3, 2, 1]))  # Output: 1
 print(minimum_moves([1, 1, 0, 1]))  # Output: 3
-print(minimum_moves([ ]))  # Output: 3
+print(minimum_moves([]))  # Output: 3
