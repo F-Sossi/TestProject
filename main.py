@@ -5,7 +5,6 @@
 
 def minimum_moves(number_list):
     """Method to find minimum moves"""
-
     # check if empty list
     if not number_list:
         return -1
