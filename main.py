@@ -15,7 +15,7 @@ def minimum_moves(number_list):
     distance_table[0] = 0
 
     # Loop through all the positions in the list
-    for i,number in enumerate(number_list):
+    for i, number in enumerate(number_list):
         # Loop through all the possible positions that can be reached
         # from the current position
         for j in range(1, number_list[i] + 1):
@@ -27,11 +27,13 @@ def minimum_moves(number_list):
                 continue
 
             # Update the minimum number of moves required to reach the next
-            distance_table[next_position] = min(distance_table[next_position], distance_table[i] + 1)
+            distance_table[next_position] = min(distance_table[next_position], 
+                                                distance_table[i] + 1)
 
     min_moves = distance_table[-1]
 
-    # if min moves is infinity, then the end of the list is unreachable return -1
+    # if min moves is infinity, then the end of the list is unreachable 
+    # return -1
     if min_moves == float('inf'):
         return -1
     
